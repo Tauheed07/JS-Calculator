@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Calc</title>
+	<link rel="stylesheet" type="text/css" href="calc.css">
+	<script src="https://kit.fontawesome.com/44f0b7050c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+	<form class="calculator" name="calc">
+		<input type="text" class="value" id="val"readonly name="txt">
+		<span class="num clear" onclick="calc.txt.value=''">C
+		</span>
+		<span class="num" onclick="calc.txt.value=Math.sqrt(calc.txt.value)"><i class="fas fa-square-root-alt" aria-hidden="true"></i></span>
+		<span class="num" onclick="calc.txt.value=backspace(calc.txt.value)"><i class="fas fa-backspace" aria-hidden="true"></i></span>
+		<span class="num" onclick="calc.txt.value+='*'"><i class="fas fa-times"></i></span>
+		<span class="num" onclick="calc.txt.value+='7'">7
+		</span>
+		<span class="num" onclick="calc.txt.value+='8'">8
+		</span>
+		<span class="num" onclick="calc.txt.value+='9'">9
+		</span>
+		<span class="num" onclick="calc.txt.value+='/'"><i class="fas fa-divide"></i>
+		</span>
+		<span class="num" onclick="calc.txt.value+='4'">4
+		</span>
+		<span class="num" onclick="calc.txt.value+='5'">5
+		</span>
+		<span class="num" onclick="calc.txt.value+='6'">6
+		</span>
+		<span class="num" onclick="calc.txt.value+='-'"><i class="fas fa-minus"></i>
+		</span>
+		<span class="num" onclick="calc.txt.value+='1'">1
+		</span>
+		<span class="num" onclick="calc.txt.value+='2'">2
+		</span>
+		<span class="num" onclick="calc.txt.value+='3'">3
+		</span>
+		<span class="num plus" onclick="calc.txt.value+='+'"><i class="fas fa-plus"></i>
+		</span>
+		<span class="num" onclick="calc.txt.value+='0'">0
+		</span>
+		<span class="num" onclick="calc.txt.value+='00'">00
+		</span>
+		<span class="num" onclick="calc.txt.value+='.'">.
+		</span>
+		<span class="num equal" onclick="document.calc.txt.value=eval(calc.txt.value)"><i class="fas fa-equals"></i>
+		</span>
+	</form>
+</div>
+<script type="text/javascript">
+	function backspace(x){
+		return x.substr(0, x.length - 1);
+	}
+</script>
+</body>
+</html>
